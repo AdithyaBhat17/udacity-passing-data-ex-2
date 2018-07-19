@@ -101,7 +101,7 @@ const movies = {
 class App extends Component {
   constructor(props){
       super(props);
-      this.userByMovie = {};
+      this.usersByMovie = {};
       profiles.forEach(profile=>{
         const movieID = profile.favoriteMovieID;
         if (this.usersByMovie[movieID]) {
@@ -124,7 +124,7 @@ class App extends Component {
       		profiles={profiles}
       		users={users}
       		movies={movies}
-      		userByMovie={this.userByMovie}
+      		userByMovie={this.usersByMovie}
       	/>
       </div>
     );
